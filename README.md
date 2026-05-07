@@ -1,50 +1,65 @@
-# Stellar-activity-vs-planet-signals
-ML project to detect exoplanet signals under stellar variability (spots, flares, rotation).
+# Synthetic PLATO-like Transit Detection Pipeline
 
-## 📖 Overview
-This project aims to simulate stellar variability (star spots, rotation, flares) and develop machine learning models to detect exoplanet signals despite stellar noise.
+This project focuses on generating synthetic PLATO-like stellar light curves for exoplanet transit detection under different stellar activity conditions.
 
-## 🎯 Objectives
-- Simulate stellar activity
-- Inject planetary signals (transits)
-- Train ML models to distinguish signals vs noise
+### Features
 
-## 🧪 Methods
-- Synthetic data generation
-- Signal processing
-- Machine Learning (Random Forest / Neural Networks)
+- Synthetic light-curve generation
+- Planetary transit injection
+- Stellar activity simulation
+- YAML-based parameter configuration
+- Metadata CSV construction
+- Statistical analysis and visualization
+- Transit Least Squares (TLS) baseline detection
+- Preparation for ML/DL classification
 
-## 📂 Project Structure
-stellar-activity-vs-planet-signals/
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│
-├── notebooks/
-│   └── exploration.ipynb
-│
-├── src/
-│   ├── data_simulation.py
-│   ├── preprocessing.py
-│   ├── model.py
-│   └── evaluation.py
-│
-├── results/
-│   ├── plots/
-│   └── metrics/
-│
-├── README.md
-├── requirements.txt
-└── main.py
+---
 
-## 🚀 Future Work
-- Use real NASA Kepler data
-- Improve deep learning models
-- Noise reduction techniques
+# Dataset Classes
 
-## 🛠️ Tech Stack
+- Class 0 → Quiet star without planet
+- Class 1 → Active star without planet
+- Class 2 → Planet with moderate stellar activity
+- Class 3 → Planet with strong stellar activity
+
+---
+
+# Files
+
+- `notebooks/` → Jupyter notebook analysis
+- `scripts/` → Python scripts
+- `data/` → Metadata and sample light curves
+- `configs/` → YAML configuration files
+- `figures/` → Generated plots and TLS outputs
+
+---
+
+# Current Progress
+
+- Metadata generation completed
+- Statistical analysis completed
+- Light-curve visualization completed
+- Flux variability comparison completed
+- TLS transit detection baseline completed
+
+---
+
+# Tools Used
+
 - Python
-- NumPy, Pandas
-- Scikit-learn
+- NumPy
+- Pandas
 - Matplotlib
+- Astropy
+- Transit Least Squares (TLS)
+- Jupyter Notebook
+
+---
+
+# Future Work
+
+- Wotan detrending
+- Random Forest classification
+- XGBoost classification
+- 1D CNN implementation
+- Automated transit classification pipeline
